@@ -73,6 +73,7 @@ console.log(laugh(3));
  * - Your `laugh()` function should build the triangle as describe above
  */
 
+// No entiendo como corre el codigo.
 
 // creates a line of * for a given length
 function makeLine(length) {
