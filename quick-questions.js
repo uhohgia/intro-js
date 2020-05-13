@@ -51,8 +51,6 @@ function sayHi(name) {
 }
 
 
-
-
 sayHi("Julia");
 
 function sayHi(name) {
@@ -67,3 +65,64 @@ function sayHi(name) {
 }
 
 sayHi("Julia")
+
+
+
+/////// PREGUNTA 4
+/*
+Hoisting:
+No me queda claro el concepto de function expressions and hoisting.
+*/
+
+/*
+All function declarations are hoisted and loaded 
+before the script is actually run. 
+
+Function expressions are not hoisted, 
+since they involve variable assignment, 
+and only variable declarations are hoisted. 
+
+The function expression will not be loaded 
+until the interpreter reaches it in the script.
+
+*/
+
+
+
+////// ============= PATTERNS WITH FUNCTION EXPRESSIONS ==============
+
+///////////////// Functions as parameters
+
+/*
+Me perdi con el tema de las function expressions...
+*/
+
+// function expression catSays
+	// Porque no se le asigna ningun valor a max en ningun lado?
+var catSays = function(max) {
+  var catMessage = "";
+  for (var i = 0; i < max; i++) {
+    catMessage += "meow ";
+    // assignment operator: catMessage = catMessage + "meow ";
+  }
+  return catMessage;
+};
+
+// function declaration helloCat accepting a callback
+function helloCat(callbackFunc) {
+  return "Hello " + callbackFunc(3);
+  // Porque callbackFunc tiene un valor de (3) si no es una funcion que tenga un parametro para recibir valores?
+  // Porque max se sobre escribe con callbackFunc(3) <-- el 3 es el valor de max? como llego hasta aqui si no estamos llamando a la funcion catSays?
+}
+
+// pass in catSays as a callback function
+helloCat(catSays);
+
+
+
+
+
+
+
+
+
