@@ -21,7 +21,7 @@ you need the left side of && to evaluate to false.
 */
 
 
-/////// PREGUNTA 2 2
+/////// PREGUNTA 2
 /*
 Evaluate the following logical expressions. Check the ones that evaluate to true.
 */
@@ -34,3 +34,36 @@ false && false // porque evalua falso?
 (3 != 6 % 3) && !(24 > 45) && (!false) // evalua a true
 
 
+/////// PREGUNTA 3 
+
+/*
+Hoisting:
+No me quedo claro el concepto de hoisting y como JS interpreta
+el acomodo del codigo
+*/
+
+// What value will be printed to the console?x
+sayHi("Julia");
+
+function sayHi(name) {
+  console.log(greeting + " " + name);
+  var greeting;
+}
+
+
+
+
+sayHi("Julia");
+
+function sayHi(name) {
+  console.log(greeting + " " + name);
+  var greeting = "Hello";
+}
+
+
+function sayHi(name) {
+  var greeting = "Hello";
+  console.log(greeting + " " + name);
+}
+
+sayHi("Julia")
