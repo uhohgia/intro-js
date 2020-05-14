@@ -48,13 +48,14 @@ num that represents the number of "ha"s to return.
  */
 
 // declare a global variable
+// no entiendo porque la variable esta vacia
 var sound = "";
 
 function laugh(num) {
 	for (var x = 0; x < num; x++ ){
-		sound = sound + "ha"; // porque estan afuera de un console log????
+		sound = sound + "ha"; // ****** porque estan afuera de un console log????
 	}
-	sound = sound + "!"; // porque estan afuera de un console log????
+	sound = sound + "!"; // ******** porque estan afuera de un console log????
 	return sound;
 }
 console.log(laugh(3));
@@ -73,7 +74,8 @@ console.log(laugh(3));
  * - Your `laugh()` function should build the triangle as describe above
  */
 
-// No entiendo como corre el codigo.
+// ******* No entiendo como corre el codigo.
+// ******** No entendi la logica de la estructura del codigo.
 
 // creates a line of * for a given length
 function makeLine(length) {
@@ -104,6 +106,95 @@ function buildTriangle(number){
 
 // test your code by uncommenting the following line
 console.log(buildTriangle(10));
+
+
+
+
+
+/*
+ * Programming Quiz: Laugh (5-4)
+ */
+
+/*
+ * QUIZ REQUIREMENTS
+ * - Your code should have a variable `laugh`
+ * - Your code should include an anonymous function expression stored in the variable `laugh`
+ * - Your anonymous function expression should take one argument
+ * - Your anonymous function expression should return the correct number of `hahaha`\'s
+ 
+Write an anonymous function expression 
+that stores a function in a variable called "laugh" 
+and outputs the number of "ha"s that you pass in as an argument.
+ */
+
+// ****** lo resolvi con un while pero me tarde en comprender la logica detras de
+// ******** la variable vacia y la asignacion del haNumber en el while
+var laugh = function(haNumber){
+	var has = "";
+	var i = 1;
+	while(i < haNumber){
+		has += "ha";	
+		i++;
+	}
+return has + "!";
+};
+
+console.log(laugh(10));
+
+
+
+var laugh = function(haNumber){
+	var has = "";
+	for (var i = 0; i <= haNumber; i++) {
+		has += "ha";
+	}
+	return has + "!";
+};
+
+console.log(laugh(10));
+
+
+/*
+ * Programming Quiz: Cry (5-5)
+ */
+
+/*
+ * QUIZ REQUIREMENTS
+ * - Your code should have a variable `cry`
+ * - Your code should include a named function expression stored in the variable `cry`
+ * - Your code should call the function expression using the variable name, not the function name
+ * - Your function expression should return the expected output
+ * - BE CAREFUL ABOUT THE PUNCTUATION AND THE EXACT WORDS TO BE PRINTED.
+ 
+Write a named function expression 
+that stores the function in a variable called cry 
+and returns "boohoo!". 
+
+Don't forget to call the function using the variable name, not the function name:
+
+boohoo
+*/
+
+
+// ***** el codigo regresa el output que se pide, pero mi respuesta no es valida
+var cry = function crying (){
+	console.log("boohoo!") ;
+};
+cry();
+
+
+//// ******* Udacity answer
+
+var cry = function myFunction(){
+    var sound = "boohoo!";  // ***** porque declaro una variable aqui?
+    return sound;
+    };
+
+// Call the function using the variable name, not the function name
+console.log(cry());
+
+// This statement is also acceptable, but it won't print anything on your console
+// cry();
 
 
 
