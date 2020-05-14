@@ -93,9 +93,7 @@ until the interpreter reaches it in the script.
 
 ///////////////// Functions as parameters
 
-/*
-Me perdi con el tema de las function expressions...
-*/
+// *********** Me perdi con el tema de las function expressions...
 
 // function expression catSays
 	// Porque no se le asigna ningun valor a max en ningun lado?
@@ -123,6 +121,7 @@ helloCat(catSays);
 ///////////////// Named Function expressions
 
 // Inline function expressions
+// ********* No entiendo la estructura de las inline
 
 /*
 A function expression is when a function is assigned to a variable. 
