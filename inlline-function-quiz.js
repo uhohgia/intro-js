@@ -14,34 +14,53 @@ so that it prints the output you see below,
 but instead of passing the laugh() function as an argument, 
 pass an inline function expression instead.
 
-emotions("happy", laugh(2)); // you can use your laugh function from the previous quizzes
+emotions("happy", laugh(2)); 
+// you can use your laugh function from the previous quizzes
 
 Prints: "I am happy, haha!"
  */
 
+/* ======== CASE 1====== */
 
-// don't change this code    emotions() function definition
+// 1. MyString parameter
+// 2. MyFunct = function parameter that will be replaced with variable name
 function emotions(myString, myFunc) {
     console.log("I am " + myString + ", " + laugh(2));
 }
 
 // your code goes here
+var laugh = function laughing(num){
+	var ha = "";
+	for (var i = 0 ; i < num; i++) {
+		ha += "ha";  // ha = ha + "ha"
+	}
+	return ha + "!";
+}
+
+
 // Call the emotions() function with two arguments
 // Argument 1 - "happy" string
 // Argument 2 - an inline function expression
+emotions("happy", laugh(2)); 
 
-// ********* No entiendo la estructura de las inline
-emotions(function laugh(x) {
-	var has = "";
-	var i = 0;
-	while(i < x){
-		has += "ha";	
-		i++;
+
+/* ======== CASE 2 INLINE FUNCTION ====== */
+
+// 1. MyString parameter
+// 2. MyFunct = function parameter that will be replaced with variable value
+function emotions(myString, myFunc) {
+    console.log("I am " + myString + ", " + myFunc(2));
+}
+
+emotions("happy", function laugh(num){ 
+		var ha = "";
+		for (var i = 0 ; i < num; i++) {
+			ha += "ha";
+		}
+		return ha + "!";
 	}
-	return has + "!";
-});
+);
 
 
-emotions("happy", laugh(2));
 
 
