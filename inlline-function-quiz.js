@@ -48,12 +48,13 @@ emotions("happy", laugh(2));
 /* ======== CASE 2 INLINE FUNCTION ====== */
 
 // 1. MyString parameter
-// 2. MyFunct = function parameter that will be replaced with variable value
+// 2. MyFunct =  parameter that will be replaced with a function
 function emotions(myString, myFunc) {
     console.log("I am " + myString + ", " + myFunc(2));
 }
 
 // PREGUNTA *********** Este tipo de funcion tiene otro nombre? 
+// replace MyString with "happy", replace MyFunc with inline function.
 emotions("happy", function laugh(num){ 
 		var ha = "";
 		for (var i = 0 ; i < num; i++) {
