@@ -28,11 +28,12 @@ function emotions(myString, myFunc) {
     console.log("I am " + myString + ", " + laugh(2));
 }
 
-// your code goes here
+// PREGUNTA *********** Inline function expression. Este tipo de funcion tiene otro nombre? 
 var laugh = function laughing(num){
 	var ha = "";
 	for (var i = 0 ; i < num; i++) {
-		ha += "ha";  // ha = ha + "ha"
+		ha += "ha";  
+		// ha = ha + "ha"
 	}
 	return ha + "!";
 }
@@ -40,7 +41,7 @@ var laugh = function laughing(num){
 
 // Call the emotions() function with two arguments
 // Argument 1 - "happy" string
-// Argument 2 - an inline function expression
+// Argument 2 - an inline function expression (contenida en la variable)
 emotions("happy", laugh(2)); 
 
 
@@ -52,6 +53,7 @@ function emotions(myString, myFunc) {
     console.log("I am " + myString + ", " + myFunc(2));
 }
 
+// PREGUNTA *********** Este tipo de funcion tiene otro nombre? 
 emotions("happy", function laugh(num){ 
 		var ha = "";
 		for (var i = 0 ; i < num; i++) {
