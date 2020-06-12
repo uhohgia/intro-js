@@ -42,7 +42,7 @@ The object should also have 4 methods:
 
 var facebookProfile = {
 	name: "Gia",
-	friends: "5",
+	friends: 5,
 	messages: ["Hi", "Thank you", "Please", "Bye"],
 	postMessage: function newPost(post) { // adds a new message string to the array	
 			facebookProfile.messages.push(post);
@@ -55,16 +55,13 @@ var facebookProfile = {
 		// }
 		// return facebookProfile.messages;
 	},
-	addFriend: function plusFriend() { // increases the friend count by 1
-		// gets current number
-		// returns value 
-		// adds value to friends + 1
+	addFriend: function plusFriend() {
+		facebookProfile.friends = facebookProfile.friends + 1;
+		return facebookProfile.friends;
 	},
 	removeFriend: function minusFriend(){
-		// body... decreases the friend count by 1
-		// gets old friend number
-		// returns value
-		// resta el valor a friends - 1
+		facebookProfile.friends = facebookProfile.friends - 1;
+		return facebookProfile.friends;
 	}
 };
 
@@ -72,8 +69,9 @@ var facebookProfile = {
 // calls
 facebookProfile.postMessage("Hola");
 // facebookProfile.deleteMessage(0);
-// facebookProfile.addFriend();
-// facebookProfile.removeFriend();
+facebookProfile.addFriend();
+facebookProfile.addFriend();
+facebookProfile.removeFriend();
 
 
 
