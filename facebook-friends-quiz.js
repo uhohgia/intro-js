@@ -70,7 +70,6 @@ var facebookProfile = {
 facebookProfile.postMessage("Hola");
 // facebookProfile.deleteMessage(0);
 facebookProfile.addFriend();
-facebookProfile.addFriend();
 facebookProfile.removeFriend();
 
 
