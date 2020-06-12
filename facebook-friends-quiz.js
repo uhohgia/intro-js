@@ -24,7 +24,7 @@ The object should also have 4 methods:
   `friends` (number)
   `messages` (array of strings) property
 
- * - Your `facebookProfile` object should have following methods
+ * - Your `facebookProfile` object should have following methods:
 `postMessage()`
 `deleteMessage()`
 `addFriend()`
@@ -42,20 +42,20 @@ The object should also have 4 methods:
 
 
 var facebookProfile = {
-	name: "string",
-	friends: "number",
+	name: "Gia",
+	friends: "5",
 	messages: ["Hi", "Thank you", "Please", "Bye"],
 	postMessage: function addMessage(message) {
-		// body...
+		// body... adds a new message string to the array
 	},
 	deleteMessage: function eraseMessage() {
-		// body...
+		// body... removes the message corresponding to the index provided
 	},
 	addFriend: function plusFriend(newFriend) {
-		// body...
+		// body... increases the friend count by 1
 	},
 	removeFriend: function minusFriend(oldFriend){
-
+		// body... decreases the friend count by 1
 	}
 };
 
