@@ -44,16 +44,16 @@ var facebookProfile = {
 	name: "Gia",
 	friends: "5",
 	messages: ["Hi", "Thank you", "Please", "Bye"],
-	postMessage: function(post) { // adds a new message string to the array	
+	postMessage: function newPost(post) { // adds a new message string to the array	
 			facebookProfile.messages.push(post);
-			return console.log(facebookProfile.messages);
-		// add input value to array	
+			return facebookProfile.messages;
 	},
-	deleteMessage: function eraseMessage(index) {
-		// body... removes the message corresponding to the index provided
-		// goes to string
-		// looks for index
-		// delete message
+	deleteMessage: function erase(index) { //removes the message corresponding to the index provided
+		// use splice to get index
+		for (var i = 0; i < facebookProfile.messages.length; i++) {
+			facebookProfile.messages[i] = facebookProfile.messages.splice(index);
+		}
+		return facebookProfile.messages;
 	},
 	addFriend: function plusFriend() {
 		// body... increases the friend count by 1
@@ -72,7 +72,7 @@ var facebookProfile = {
 
 // calls
 facebookProfile.postMessage("Hola");
-// facebookProfile.deleteMessage(0);
+facebookProfile.deleteMessage(0);
 // facebookProfile.addFriend();
 // facebookProfile.removeFriend();
 
