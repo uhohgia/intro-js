@@ -50,14 +50,13 @@ var facebookProfile = {
 	},
 	deleteMessage: function erase(index) { //removes the message corresponding to the index provided
 		// use splice to get index
-		for (var i = 0; i < facebookProfile.messages.length; i++) {
-			facebookProfile.messages[i] = facebookProfile.messages.splice(index);
-		}
-		return facebookProfile.messages;
+		// for (var i = 0; i < facebookProfile.messages.length; i++) {
+		// 	facebookProfile.messages[i] = facebookProfile.messages.splice(index);
+		// }
+		// return facebookProfile.messages;
 	},
-	addFriend: function plusFriend() {
-		// body... increases the friend count by 1
-		// gets new friend number
+	addFriend: function plusFriend() { // increases the friend count by 1
+		// gets current number
 		// returns value 
 		// adds value to friends + 1
 	},
@@ -72,7 +71,7 @@ var facebookProfile = {
 
 // calls
 facebookProfile.postMessage("Hola");
-facebookProfile.deleteMessage(0);
+// facebookProfile.deleteMessage(0);
 // facebookProfile.addFriend();
 // facebookProfile.removeFriend();
 
