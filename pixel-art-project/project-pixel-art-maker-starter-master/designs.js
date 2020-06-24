@@ -13,32 +13,53 @@ Select size input
 When size is submitted by the user, call makeGrid()
 */
 
-// store input in variables
+	// const submitButton = document.querySelector("#sizePicker");
 
-const valueHeight = document.querySelector("#inputHeight").value;
-const valueWidth = document.querySelector("#inputWidth").value;
-const submitButton = document.querySelector("#sizePicker");
-const color = document.querySelector("#colorPicker");
+/*
+Submit is an EVENT
+https://developer.mozilla.org/en-US/docs/Web/API/SubmitEvent
 
-function makeGrid(gridHeight, gridWidth) {
-	let table = document.getElementById("pixelCanvas");
-	// rows
-	let rows = document.createElement("tr");
-	let columns = document.createElement('td');
-	// create grid -- use nested for loop
-	// outer loop
-	for (var i = 1; i <= valueHeight; i++) {
-		table.append(rows);
-		// inner loop
-		for (var j = 1; i <= valueWidth; i++) {
-			rows.append(columns);
+
+
+
+*/
+
+function submitWork() {
+	// get value of grid height + width 
+	const valueHeight = document.querySelector("#inputHeight").value;
+	const valueWidth = document.querySelector("#inputWidth").value;	
+	console.log("height " + valueHeight + " width " + valueWidth);
+  event.preventDefault();
+
+	// store input in variables
+	function makeGrid(gridHeight, gridWidth) {
+		let table = document.getElementById("pixelCanvas");
+		// rows
+		let rows = document.createElement("tr");
+		let columns = document.createElement('td');
+		// create grid -- use nested for loop
+		// outer loop
+		for (var i = 1; i <= valueHeight; i++) {
+			table.append(rows);
+			// inner loop
+			for (var j = 1; i <= valueWidth; i++) {
+				rows.appendChild(columns);
+			}
 		}
 	}
+	makeGrid();
+
 }
+// add event listener to submit
+document.addEventListener('submit', submitWork);
+
+
 
 
 
 // pick a color from the colorPicker
+
+const color = document.querySelector("#colorPicker");
 
 // store color in variable
 
