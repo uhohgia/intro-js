@@ -19,9 +19,6 @@ When size is submitted by the user, call makeGrid()
 Submit is an EVENT
 https://developer.mozilla.org/en-US/docs/Web/API/SubmitEvent
 
-
-
-
 */
 
 function submitWork() {
@@ -34,26 +31,24 @@ function submitWork() {
 	// store input in variables
 	function makeGrid(gridHeight, gridWidth) {
 		let table = document.getElementById("pixelCanvas");
-		// rows
-		let rows = document.createElement("tr");
-		let columns = document.createElement('td');
 		// create grid -- use nested for loop
 		// outer loop
-		for (var i = 1; i <= valueHeight; i++) {
-			table.append(rows);
+		for (var row = 1; row <= valueHeight; row++) {
+			let trRows = document.createElement("tr");
+			table.append(trRows);
+			console.log("working row");
 			// inner loop
-			for (var j = 1; i <= valueWidth; i++) {
-				rows.appendChild(columns);
+			for (var column = 1; column <= valueWidth; column++) {
+				let tdColumns = document.createElement('td');
+				trRows.append(tdColumns);
+				console.log("working column");
 			}
 		}
 	}
 	makeGrid();
-
 }
 // add event listener to submit
 document.addEventListener('submit', submitWork);
-
-
 
 
 
