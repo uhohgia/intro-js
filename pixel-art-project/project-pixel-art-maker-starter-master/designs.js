@@ -9,54 +9,46 @@ that dynamically creates a grid that the user can interact with.
 
 Select color input
 Select size input
-
-When size is submitted by the user, call makeGrid()
 */
 
-	// const submitButton = document.querySelector("#sizePicker");
 
-/*
-Submit is an EVENT
-https://developer.mozilla.org/en-US/docs/Web/API/SubmitEvent
+// Submit is an EVENT - https://developer.mozilla.org/en-US/docs/Web/API/SubmitEvent
 
-*/
+// Refactor: When size is submitted by the user, call makeGrid()
 
-function submitWork() {
-	// get value of grid height + width 
+document.addEventListener('submit', function(){
+	 event.preventDefault();
+	// get value of grid height + width & store input in variables
 	const valueHeight = document.querySelector("#inputHeight").value;
 	const valueWidth = document.querySelector("#inputWidth").value;	
-	console.log("height " + valueHeight + " width " + valueWidth);
-  event.preventDefault();
+	makeGrid(valueHeight, valueWidth);
+});
 
-	// store input in variables
-	function makeGrid(gridHeight, gridWidth) {
-		let table = document.getElementById("pixelCanvas");
-		// create grid -- use nested for loop
-		// outer loop
-		for (var row = 1; row <= valueHeight; row++) {
-			let trRows = document.createElement("tr");
-			table.append(trRows);
-			console.log("working row");
-			// inner loop
-			for (var column = 1; column <= valueWidth; column++) {
-				let tdColumns = document.createElement('td');
-				trRows.append(tdColumns);
-				console.log("working column");
-			}
+
+// Create grid function 
+function makeGrid(valueHeight, valueWidth) {
+	let table = document.getElementById("pixelCanvas");
+	// outer loop
+	for (var row = 1; row <= valueHeight; row++) {
+		let trRows = document.createElement("tr");
+		table.append(trRows);
+		// inner loop
+		for (var column = 1; column <= valueWidth; column++) {
+			let tdColumns = document.createElement('td');
+			trRows.append(tdColumns);
 		}
 	}
-	makeGrid();
 }
-// add event listener to submit
-document.addEventListener('submit', submitWork);
+
+
+// add color
+
+// square.addEventListener('click', function(){
+// 	event.preventDefault();
+// 	console.log("TD has been clicked");
+// 	const colorValue = document.querySelector("#colorPicker").value;
+// });
 
 
 
-// pick a color from the colorPicker
 
-const color = document.querySelector("#colorPicker");
-
-// store color in variable
-
-
-/// Add color to each clicked square
